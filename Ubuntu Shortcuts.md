@@ -1,0 +1,1 @@
+Aprire Terminale Linux : CTRL+ALT+T
