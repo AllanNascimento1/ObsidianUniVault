@@ -185,3 +185,5 @@ jninfjnfgjnifgjnifgjnisfdjnisfdsfdjnisfd
 Si può creare puntatori senza tipo con la sintassi : 
 `void *puntatore
 Dato che questi puntatori non hanno tipo 
+
+![[rayTracingImg.jpg]]
