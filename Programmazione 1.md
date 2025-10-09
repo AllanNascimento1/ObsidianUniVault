@@ -180,7 +180,7 @@ Per assegnare loro un indirizzo di memoria si deve
 Devono SEMPRE puntare a un oggetto con il loro stesso tipo.
 Dato che i puntatori gestiscono indirizzi di memoria, la memoria che viene a loro allocata è solo quella sufficiente per memorizzare il numero che indica l'indirizzo di memoria, e di conseguenza tutti i puntatori indipendenti dal loro tipo occupano lo stesso spazio in memoria.
 
-
+jninfjnfgjnifgjnifgjnisfdjnisfdsfdjnisfd
 
 Si può creare puntatori senza tipo con la sintassi : 
 `void *puntatore
