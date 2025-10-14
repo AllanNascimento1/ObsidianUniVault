@@ -1,4 +1,4 @@
-### Tipi dato
+## Tipi dato
 Sono distinti in:
 **Tipi fondamentali** (informazioni semplici):
 	**interi** : int, short, long, long long
@@ -11,6 +11,7 @@ Sono distinti in:
 	costruiti a partire dei tipi fondamentali mediante array, puntatori e ecc.
 
 Puoi usare la funzione `sizeof(var)` per ottenere la loro dimensione in byte.
+### Tipi Fondamentali
 #### Interi
 Tipicamente codificati a complemento a 2 (quindi con segno), la dimensione che occupano può cambiare da macchina a macchina. 
 puoi creare interi positivi aggiungendo `unsigned` prima del tipo.
@@ -24,7 +25,7 @@ Bit-a-bit :
 ^   |   x^y   |   XOR
 ~   |   ~x   |   NOT
 
-#### Boolean
+### Boolean
 Tipo dato per gestire valori Vero=1 o Falso=0, usa la [[Logica Booleana]].
 L'AND e OR sono valutati attraverso la lazy evaluation, quindi se non è necessario valutare tutta l'operazione il calcolatore salterà alcune espressioni.
 
@@ -65,3 +66,46 @@ Per scrivere dati dentro un stream si usa l'istruzione:
 - Questo si chiama **Scrittura Multipla** e equivale a scrivere:
 `stream << espressione1`;
 `stream << espressione2`;
+### Tipi Derivati
+#### I Riferimenti
+I riferimenti permettono di assegnare più nomi (variabili) alla stessa area di memoria, in modo che puoi modificare il valore di quel area di memoria utilizzando uno dei due riferimenti che hai creato. 
+Sintassi:
+`int var = 0;
+`int &riferimento = var; //prende l'area di memoria di var
+`riferimento = 3; //modifica anche il valore di var
+Questa variabile ritornerà sempre il valore di `var`. 
+
+NB: nella dichiarazione di una variabile riferimento si deve usare la variabile se stessa e non la sua area di memoria, quindi se vuoi usare un puntatore per dichiarare un riferimento dovrai prima usare il deference.
+`int var = 0;
+`int* id_var = &var;
+`int& ref_var = *id_var;
+
+Una variabile riferimento nella sua dichiarazione deve essere inizializzata e non è possibile ridefinire dove punta, in più la variabile riferimento **DEVE** avere lo stesso tipo della variabile.
+#### Operatori sugli indirizzi
+#### & (Address-of)
+Ritorna l'indirizzo di memoria del espressione a cui viene applicato e serve anche per creare variabili reference.
+#### \* (Dereference)
+Ritorna il valore al interno del indirizzo di memoria del espressione a cui viene applicato, usato per i puntatori.
+#### I Puntatori
+I puntatori sono delle variabili che hanno la funzione di gestire le aree di memoria di altre variabili, quindi come valore hanno indirizzi di memoria.
+Sintassi:
+`int *id_var;
+I puntatori ritornano l'indirizzo di memoria del oggetto a cui punta.
+
+Per assegnare loro un indirizzo di memoria si deve fare uso del istruzione di **Address-of (&)**, che restituirà l'indirizzo di memoria del oggetto a cui è applicato.
+`int *id_var;
+`int var = 10;
+`id_var = &var;  //&var restituisce il valore in memoria di var : 0x7ffe0be9a4ac
+
+Devono **SEMPRE** puntare a un oggetto con il loro stesso tipo.
+Dato che i puntatori gestiscono indirizzi di memoria, la memoria che viene a loro allocata è solo quella sufficiente per memorizzare il numero che indica l'indirizzo di memoria, e di conseguenza tutti i puntatori indipendenti dal loro tipo occupano lo stesso spazio in memoria.
+
+Si può creare puntatori senza tipo con la sintassi : 
+`void *puntatore
+Dato che questi puntatori non hanno tipo si dovrà fare uso del cast esplicito per usarli. 
+
+# Librerie
+### `<cassert>
+#### Funzioni:
+`assert(bool) : lancia un errore se il parametro è falso
+

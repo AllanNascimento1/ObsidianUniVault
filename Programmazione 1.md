@@ -147,43 +147,13 @@ Non sembrano utili.
 **`break / continue / goto`**
 	Queste istruzioni rompono il normale flusso del codice, facendo "saltare" la linea di codice da eseguire. Creano molta confusione quando si legge il codice quindi dovrebbero essere usata solo in casi ultra specifici.
 ## I Tipi derivati
-Sono dei tipi costruiti dai tipi fondamentali attraverso vari meccanismi, i costrutti principali per costruire questi tipi sono:
+Sono dei tipi costruiti dai tipi fondamentali attraverso vari meccanismi, i costrutti principali per costruire i tipi derivati tipi sono:
 I **Riferimenti**
 **Puntatori**
 **Array**
 **Strutture**
 **Unioni**
 **Classi**
-### I Riferimenti
-I riferimenti permettono di assegnare più nomi (variabili) alla stessa area di memoria, in modo che puoi modificare il valore di quel area di memoria utilizzando uno dei due riferimenti che hai creato. 
-Sintassi:
-`int var = 0;
-`int &riferimento = var; //prende l'area di memoria di var
-`riferimento = 3; //modifica anche il valore di var
-Questa variabile ritornerà sempre il valore di `var 
 
-Una variabile riferimento nella sua dichiarazione deve essere inizializzata e non è possibile ridefinire dove punta.
-Non viene applicato nessun cast nella sua dichiarazione, quindi deve avere lo stesso tipo della variabile originale.
-### Operatori sugli indirizzi
-#### & (Address-of)
-Ritorna l'indirizzo di memoria del espressione a cui viene applicato.
-#### \* (Dereference)
-Ritorna il valore al interno del indirizzo di memoria del espressione a cui viene applicato.
-### I Puntatori
-I puntatori sono delle variabili che hanno la funzione di gestire le aree di memoria di altre variabili, quindi come valore hanno indirizzi di memoria.
-Sintassi:
-`int *id_var;
-I puntatori ritornano l'indirizzo di memoria del oggetto a cui punta.
+Ogni Linguaggio di programmazione implementa diversamente questi costrutti, in [C++](Linguaggio%20C++#Tipi%20Derivati) tutti questi costrutti possono essere usati dal programmatore.
 
-Per assegnare loro un indirizzo di memoria si deve 
-
-Devono SEMPRE puntare a un oggetto con il loro stesso tipo.
-Dato che i puntatori gestiscono indirizzi di memoria, la memoria che viene a loro allocata è solo quella sufficiente per memorizzare il numero che indica l'indirizzo di memoria, e di conseguenza tutti i puntatori indipendenti dal loro tipo occupano lo stesso spazio in memoria.
-
-jninfjnfgjnifgjnifgjnisfdjnisfdsfdjnisfd
-
-Si può creare puntatori senza tipo con la sintassi : 
-`void *puntatore
-Dato che questi puntatori non hanno tipo 
-
-![[rayTracingImg.jpg]]
