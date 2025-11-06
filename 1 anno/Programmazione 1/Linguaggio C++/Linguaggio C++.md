@@ -1,3 +1,6 @@
+[Basi per la scrittura di un programma](Scrittura%20di%20un%20Programma)
+## Operatori 
+Gli operatori in 
 ## Tipi dato
 Sono distinti in:
 **Tipi fondamentali** (informazioni semplici):

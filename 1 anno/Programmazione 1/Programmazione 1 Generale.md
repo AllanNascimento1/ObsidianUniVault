@@ -6,41 +6,10 @@ Esami Open Book
 tutor.programmazione1.disi@unitn.it
 ## Link agli argomenti : 
 [[Terminologia]]
-[C++](Linguaggio%20C++.md) 
+[Compilatore e Linker](Compilazione%20e%20Linking.md)
+[[Scrittura di un Programma]]
+[C++](Linguaggio%20C++.md)
 [[Linux]]
-## Compilazione e Linking di un file
-
-Invece per compilare un progetto diviso in più file il compilatore traduce uno alla volta tutti i file in file oggetti.
-Dopo prende il file oggetti e li collega alle librerie di sistema dal linker e genera un singolo file eseguibile (default a.out)
-	Comando Linux : 
-	g++ prova1.cpp prova2.cpp . . . provaN.cpp
-
-Nel file oggetto creato dal compilatore senza il linker è presente solo il codice a linguaggio macchina del file sorgente, quindi non è possibile compilarlo dato che non possiede ne il codice delle librerie di sistema ne il codice necessario per inserire il codice in memoria ed eseguirlo.
-
-Il compilatore ha anche il compito di controllare se il codice contiene degli errori di sintassi ma NON errori a run time.
-
-## Scrittura di un Programma
-Identificatori : i nomi in un codice C++ devono essere univoci (per le variabili).
-Parole Chiave : insieme di lettere che hanno già un significato stabilito dal linguaggio.
-Espressioni Letterali : valori costanti (es: 40).
-
-Sequenze di Escape :
-\n   - Nuova riga
-\t    - Tabulazione orizzontale
-\v   - Tabulazione verticale
-\b   - 
-\f
-\a
-\\\
-\\'
-\\"
-
-In C++ puoi cambiare la base di un numero : 
-Decimale : 12
-Esadecimale : 012 
-Ottale : 0X12
-
-\- \- \- 2025-09-17 \- \- \-
 ## Variabili e Costanti
 Le variabili sono spazi di memoria composti da 4 componenti:
 nome, tipo, locazione in memoria e il suo valore.

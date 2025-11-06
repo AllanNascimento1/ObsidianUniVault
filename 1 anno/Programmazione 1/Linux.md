@@ -1,4 +1,3 @@
-\- \- \- [[2025-09-11]] \- \- \-
 #### Ubuntu
 Ubuntu è la versione di linux che usiamo in laboratorio
 
