@@ -92,20 +92,63 @@ Sintassi:
 `int *id_var;
 I puntatori ritornano l'indirizzo di memoria del oggetto a cui punta.
 
+**Assegnazioni a Puntatori**
 Per assegnare loro un indirizzo di memoria si deve fare uso del istruzione di **Address-of (&)**, che restituirà l'indirizzo di memoria del oggetto a cui è applicato.
 `int *id_var;
 `int var = 10;
 `id_var = &var;  //&var restituisce il valore in memoria di var : 0x7ffe0be9a4ac
 
-Devono **SEMPRE** puntare a un oggetto con il loro stesso tipo.
+L'assegnazione tra puntatori è quando non usi nessun dei due operatori.
+`int var0 = 10;
+`int* var1 = &var0;
+`int* var2;
+`var2 = var1;  //var2->var0 e var1->var0
+
+Un puntatore deve **SEMPRE** puntare a un oggetto con il suo stesso tipo.
 Dato che i puntatori gestiscono indirizzi di memoria, la memoria che viene a loro allocata è solo quella sufficiente per memorizzare il numero che indica l'indirizzo di memoria, e di conseguenza tutti i puntatori indipendenti dal loro tipo occupano lo stesso spazio in memoria.
 
+**Accedere ai Puntatori**
+Per accedere al oggetto che il puntatore sta puntando si dovrà usare l'operazione di dereference "\*"
+`int var = 10;
+`int *id_var = &var;
+`int test = *id_var + 1; //test= var+1 (10+1)
+`*id_var = 12; //var=2
+
+**Puntatori void**
 Si può creare puntatori senza tipo con la sintassi : 
 `void *puntatore
-Dato che questi puntatori non hanno tipo si dovrà fare uso del cast esplicito per usarli. 
+Dato che questi puntatori non hanno tipo si dovrà fare uso del cast esplicito per usarli.
+`int var = 10;
+`char let = 'a'
+`void* idVar = &var;
+`*(int*)idVar = 1; //var = 11
+`idVar = &let;
+`cout<<*(char*)idVar;  //stampa "a"
 
+**Puntatori costanti**
+Ci sono 3 tipi di puntatori costanti:
+Puntatori a costante:
+`const int* var;
+
+## Allocazione e Deallocazione
+### Statica
+La allocazione di memoria statica obbliga a definire la struttura e la dimensione a compile time, dato che memorizza i dati nel stack. Un esempio di allocazione statica è la dichiarazione di un array statico, o semplicemente la dichiarazione di una variabile di tipo base (fondamentale).
+
+### Dinamica
+La allocazione dinamica usa un'area di memoria chiamata store (heap) che gestisce l'acceso a questi dati attraverso i puntatori.
+Per la gestione dinamica della memoria in C++ esiste due operatori:
+`new tipo` - Alloca un area nel heap adatta a contenere un oggetto della dimensione del suo tipo.
+`new tipo[n]` - Alloca nel heap n celle della dimensione del tipo, ossia per memorizzare un array.
+`delete indirizzo` - Dice al sistema operativo che quel area di memoria non è più utilizzata dal programma, i dati al interno del heap non vengono azzerati.
+`delete[n] indirizzo` - Dice al SO di liberare le n celle di dimensione del tipo.
+
+NB: quando uso `delete` a un'area di memoria, quella area può comunque essere accesa dal puntatore.
 # Librerie
-### `<cassert>
-#### Funzioni:
+#### `<iostream>bu
+#### `<fstream>
+#### `<string>
+#### `<ctime>
+#### `<cstdlib>
+#### `<cassert>
+##### Funzioni:
 `assert(bool) : lancia un errore se il parametro è falso
-

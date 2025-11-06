@@ -1,9 +1,9 @@
 \- \- \- [[2025-09-11]] \- \- \-
-#### [[Ubuntu]]
-Questo è il sistema Operativo opensource che usiamo in laboratorio
+#### Ubuntu
+Ubuntu è la versione di linux che usiamo in laboratorio
 
-Usare questo commando su ubunto.
-sudo apt-get install build-essencial 
+Usare questo commando su ubuntu: 
+`sudo apt-get install build-essencial 
 
 Editor per scrivere codice da comand shell in ubunto : pico
 #### [[Linux Filesystem]]

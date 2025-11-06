@@ -1,5 +1,5 @@
 ## Vettori Geometrici
-Nel algebra lineare i punti sono rappresentati nel [insieme](Analisi%20Matematica#Teoria%20degli%20insiemi) $\Bbb R^2$ (Piano) o $\Bbb R^3$ (Spazio), che sono l'insiemi formati dal [prodotto cartesiano](Analisi%20Matematica#Prodotto%20Cartesiano) di $\Bbb R\times\Bbb R$ per il piano e $\Bbb R\times\Bbb R\times\Bbb R$ per l'spazio, questi punti possono essere identificati mediante l'introduzione di un sistema di coordinate cartesiane. 
+Nel algebra lineare i punti sono rappresentati nel [insieme](Analisi%20Matematica.md#Teoria%20degli%20insiemi) $\Bbb R^2$ (Piano) o $\Bbb R^3$ (Spazio), che sono l'insiemi formati dal [prodotto cartesiano](Analisi%20Matematica.md#Prodotto%20Cartesiano) di $\Bbb R\times\Bbb R$ per il piano e $\Bbb R\times\Bbb R\times\Bbb R$ per l'spazio, questi punti possono essere identificati mediante l'introduzione di un sistema di coordinate cartesiane. 
 Questi punti sono scritti $P(x,y)$ nel piano e $P(x,y,z)$ nel spazio.
 
 La prima definizione di vettore geometrico è per ogni coppia $A = (x_A,y_A)$ , $B = (x_B,y_B)$ nel piano, il vettore geometrico $\vec {AB}$ è l'elemento di $\Bbb R^2$ aventi componenti $(x_B - x_A,y_B-y_A)$ , la stessa identica cosa vale per $\Bbb R^3$. 
@@ -50,7 +50,7 @@ $$
 Geometricamente questa equazione è come prendere il vettore applicato di $\vec {P_1P_2}$ e scalarlo per $t$, questo crea un nuovo vettore $\vec {P_1P}$ che se spostato al punto di origine della retta, ossia $P_1$, risulterà nel punto $P$.
 ![[Pasted image 20250916094036.png]]
 
-Se eliminiamo il parametro $t$ dalla equazione possiamo ottenere un [equazione cartesiana](Equazioni%20Cartesiane) della retta.
+Se eliminiamo il parametro $t$ dalla equazione possiamo ottenere un [equazione cartesiana](Equazioni%20Cartesiane.md) della retta.
 $$ax+by=c$$
 	Svolgimento, considerando $\vec V(x_V,y_V) = (x_1-x_2 , y_1-y_2)$ :
 $$
@@ -279,7 +279,6 @@ $(AB)^T=B^TA^T$
 Grazie alla peculiare definizione della moltiplicazione matriciale possiamo descrivere un sistema di equazioni lineare come:
 $$Ax=b$$
 Dove A è la matrici dei **Coefficienti** delle incognite, x è un vettore colonna con le **Incognite** e b è un vettore colonna con i **Termini Noti**.
-
 ### Alcune Applicazioni delle Matrici
 #### Teoria dei grafi
 Un grafo $G$ è formato da un insieme di vertici $V$ e una lista di lati $E$, dove per lato si intende una coppia non ordinata (cioè $l_1(v_1,v_2)$=$l_2(v_2,v_1)$) di vertici.
@@ -290,3 +289,7 @@ Una proprietà importante dei grafi sono i **Camini**, cioè una successione di 
 Sia $A$ la matrice di adiacenza a un grafo $G$, l'elemento in posizione $(i,j)$ della matrice $A^s$ è uguale al numero di camini di lunghezza $s$ con inizio in $v_i$ e fine in $v_j$.
 Questo teorema ci dice che per trovare tutti i camini nel grafo $G$ di lunghezza $n$ possiamo semplicemente mettere la nostra matrice a potenza $n$. Quindi se vogliamo trovare tutti i camini di lunghezza 2 possiamo fare: $A^2=A*A$.
 ### Combinazioni lineari
+La combinazione lineare delle matrici $A_1,...,A_k$ è una matrice:
+$$c_1A_1+c_2A_2+...+c_kA_k|c_1,...,c_k\in\Bbb R$$
+In particolare si può definire un sistema lineare di forma $Ax=b$ come la combinazione lineare delle colonne $A_1,A_2,...$ per gli elementi di $x=(x_1,x_2,...)$
+

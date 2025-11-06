@@ -1,52 +1,14 @@
 Sono in Gruppo 1
 Martedì 8:30 - 10:30
 Giovedì 10:30 - 12:30
-Non usare strutture di C++ negli esami se è scritto di non farlo
 Esami Open Book
-
 ##### Tutorato
-da Lunedì 29 settembre 2025
-14:30  - 16:30
-Aula A201
 tutor.programmazione1.disi@unitn.it
-
-Linguaggio di programmazione [C++](Linguaggio%20C++) 
-
-\- \- \- 2025-09-10 \- \- \-
-TEORIA
-
-Coding
-	è il processo di conversione di un insieme di istruzioni in linguaggio parlato a un insieme di istruzioni in un linguaggio comprensibile ad un computer
-
-Programming
-	è l'insieme dei passaggi necessari per passare da una richiesta in linguaggio parlato a un insieme di istruzioni in linguaggio parlato. 
-	Programming è più complesso del coding e infatti comprende anche una parte importante di coding ma comprende anche altri fasi come Analisi, Testing, Development, Performance e ecc.
-
-\- \- \- 2025-09-11 \- \- \-
-LAB
+## Link agli argomenti : 
+[[Terminologia]]
+[C++](Linguaggio%20C++.md) 
 [[Linux]]
-
-\- \- \- 2025-09-12 \- \- \-
-TEORIA
-Attento a compilazioni multiple negli esercizi del prof se si usa Visual Studio.
-
-Installare il Subsystem Linux su Windows :
-https://learn.microsoft.com/en-us/windows/wsl/
-
 ## Compilazione e Linking di un file
-Il codice è scritto in file di testo (chiamato **sorgente**) attraverso l'uso di un editor, la sorgente deve successivamente essere compilata in un file con un linguaggio leggibile dal computer attraverso il seguente processo:
-Il file sorgente viene preso dal sistema operativo e tradotto in un **File Oggetto** dal compilatore.
-	Commando Linux : 
-	g++ -c prova.cc
-	(Crea un file oggetto "a.o")
-Il file oggetto viene dopo collegato alle librerie di sistema dal linker e cosi viene generato un file eseguibile. 
-	Commando Linux:
-	g++ a.o 
-	Altrimenti per compilare e linkare il file:
-	g++ file.cpp
-	(Crea un file a.out)
-Puoi chiedere al compilatore di segnalare anche gli warning con:
-	g++ -Wall file.cpp
 
 Invece per compilare un progetto diviso in più file il compilatore traduce uno alla volta tutti i file in file oggetti.
 Dopo prende il file oggetti e li collega alle librerie di sistema dal linker e genera un singolo file eseguibile (default a.out)
@@ -101,7 +63,7 @@ Le variabili globali nel multithreading vengono copiate per ogni istanza, quindi
 ## Stream
 Un programma comunica con l'esterno tramite uno o più flussi di caratteri chiamato stream. Un stream è una struttura logica costituita da una sequenza di caratteri, in numero teoricamente infinito, terminante con un apposito carattere che ne identifica la fine.
 Gli stream vengono associati (con opportuni comandi) ai dispositivi fisici collegati al computer (tastiera, video) o a file residenti sulla memoria di massa (Hard disk).
-[Stream in C++](Linguaggio%20C++#Stream)
+[Stream in C++](Linguaggio%20C++.md#Stream)
 ## Tipi dato 
 Variabili sono definite in parte dal loro tipo, questo è una categorizzazione delle variabili e stabilisce lo spazio che occupano in memoria, come sono codificate infine quali e come le operazioni possono essere fatte su di esse.
 ### Tipi dato numerici
@@ -127,7 +89,7 @@ Binale :
 	9.25  $1001.01=1*1.00101*2^{3}$ 
 	-0.75  $0.11=-1*1.1*2^{-1}$ 
 
-Spiegazione del implementazione di tutti i tipi in C++ su [Tipi Dato C++](Linguaggio%20C++#Tipi%20Dato) 
+Spiegazione del implementazione di tutti i tipi in C++ su [Tipi Dato C++](Linguaggio%20C++.md#Tipi%20Dato) 
 ## Istruzioni
 **Istruzioni semplici** sono definizioni e espressioni che terminano in un punto virgola.
 **Istruzioni strutturate** cambiano il flusso del programma, che di solito è sequenziale (riga per riga), permettendo azioni più complesse, possono essere :
@@ -155,5 +117,47 @@ I **Riferimenti**
 **Unioni**
 **Classi**
 
-Ogni Linguaggio di programmazione implementa diversamente questi costrutti, in [C++](Linguaggio%20C++#Tipi%20Derivati) tutti questi costrutti possono essere usati dal programmatore.
+Ogni Linguaggio di programmazione implementa diversamente questi costrutti, in [C++](Linguaggio%20C++.md#Tipi%20Derivati) tutti questi costrutti possono essere usati dal programmatore.
+## Array
 
+### Array multidimensionali
+#### Statici
+Gli array multidimensionali statici sono matrici dove tutte le loro dimensioni sono definite a compile time.
+
+Dato che essi sono definiti a compile time, il compilatore può dedicare tutto l'spazio di memoria necessario in modo da avere tutti gli elementi della matrice uno dopo l'altro. In pratica questo significa che una matrice statica è come un array in memoria
+
+**Definizione:**
+`tipo ident[dim1][dim2]...[dimN];
+NB: La definizione della matrice non significa che gli elementi saranno azzerati.
+
+**Inizializzazione:**
+`tipo ident[dim1][dim2] = {{1,2,3,...},{1,2,3,...},...}
+NB: Quando viene fatta l'assegnazione a una matrice, tutti gli elementi non definiti dalla assegnazione saranno inizializzati a 0.
+Esempio: `int mat[2][3] = {{3,3,3},{}} // valMat={{3,3,3},{0,0,0}}
+
+**Aritmetica dei Puntatori**
+Quando hai un puntatore e lo sommi a un numero intero, il puntatore si muove per puntare alla prossima cella di memoria, dove una cella di memoria è la quantità di byte necessari per il tipo a quale punta. Questo significa che l'operazione:
+`tipo* id=&var;
+`id+=2; // Il compilatore lo interpreta: id=id+(2)*(sizeof(tipo))
+
+Una variabile array equivale a una variabile puntatore costante. 
+`int mat[5];  //= const int* mat;
+
+Quindi l'operazione di prelevare un elemento del array equivale a scrivere:
+`int var = mat[10]; //int var = *(mat+10)
+
+### Array/Matrici e funzioni
+#### Array/Matrici statiche
+**Passaggio come parametro**
+Dato che gli array sono in pratica dei puntatori costanti, le seguenti definizioni sono interscambiabili:
+`int func(int[dim]);
+`int func(int[]);
+`int func(const int*);
+Se invece devi passare una matrice, le dimensioni superiori devono essere definite nel parametro:
+`int func(int[dim1][dim2][dim3]);
+`int func(int[][dim2][dim3]);
+`int func(const int*[dim2][dim3]);
+
+**Ritorno di un Array**
+Una funzione normalmente non può ritornare un array, ma può ritornare se l'array è stato allocato esternamente alla funzione. Quindi può ritornare solo array passati da parametro, o definite globalmente. 
+Questo perché l'spazio occupato dalle variabili dichiarate al interno di una funzione, viene liberato alla fine della funzione.
