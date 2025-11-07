@@ -5,9 +5,12 @@ Esami Open Book
 ##### Tutorato
 tutor.programmazione1.disi@unitn.it
 ## Link agli argomenti : 
+#### Concetti generali 
+Cioè i concetti separati da un linguaggio di programmazione specifico : 
 [[Terminologia]]
 [Compilatore e Linker](Compilazione%20e%20Linking.md)
 [[Scrittura di un Programma]]
+#### Linguaggio C++
 [C++](Linguaggio%20C++.md)
 [[Linux]]
 ## Variabili e Costanti

@@ -146,8 +146,10 @@ Per la gestione dinamica della memoria in C++ esiste due operatori:
 `delete[n] indirizzo` - Dice al SO di liberare le n celle di dimensione del tipo.
 
 NB: quando uso `delete` a un'area di memoria, quella area può comunque essere accesa dal puntatore.
+
+Attraverso la gestione dinamica della memoria possiamo introdurre [[Le Strutture]].
 # Librerie
-#### `<iostream>bu
+#### `<iostream>
 #### `<fstream>
 #### `<string>
 #### `<ctime>
