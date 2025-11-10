@@ -1,6 +1,6 @@
 Le Strutture sono una collezione ordinata di dati, detti anche campi o membri, che hanno tipo, nome e valore diversi.
 
-Una struttura è interpretata dal compilatore come un nuovo tipo che potrà essere assegnato alle variabili, ma vengono usati diversamente dalle variabili base dato che non possono essere usati come oggetto unico, ma invece si deve manipolare i campi al interno della struttura.
+Una struttura è interpretata dal compilatore come un nuovo tipo che potrà essere assegnato alle variabili, ma vengono usati diversamente dai tipi fondamentali dato che non possono essere usati come oggetto unico, ma invece si deve manipolare i campi al interno della struttura.
 ## Uso nel Codice
 #### Definizione
 Una struttura viene definita nel seguente modo : 
@@ -27,20 +27,21 @@ Possiamo inizializzare/assegnare la variabile con un valore nel seguente modo:
 `	int eta;
 `};
 `persona p1 = {"Erin Mujaj", 19};
-I valori devono essere messi in ordine e i campi senza valore saranno inizializzati a 0 se possibile.
+I valori devono essere mesi in ordine, inoltre i campi senza valore saranno inizializzati a 0 se possibile.
 
 Possiamo assegnare il valore di una struttura a un altra : 
 `persona x,y = {"Furli", 19};
 `x = y;
-Ma la assegnazione viene fatta copiando ogni campo della struttura, il che può essere computazionalmente onerosa.
-Anche gli array statici vengono copiati.
+Ma la assegnazione viene fatta copiando ogni campo della struttura, il che può essere computazionalmente oneroso.
+Anche i campi di tipo array statico vengono copiati elemento per elemento, causa principale delle basse prestazione di una copia di strutture.
 
-Per assegnare ad una variabile una **Struttura Dinamica**:
+Per assegnare ad una variabile di tipo puntatore una **Struttura Dinamica**:
 `struct strutt{
 `	int val;
 `	char val2;
 `};
-`strutt var = new strutt{5,'A'};
+`strutt* var = new strutt{5,'A'};
+
 #### Accesso ai suoi campi
 Per accedere ai campi di una struttura:
 `nomeStrutt.nomeCampo;
