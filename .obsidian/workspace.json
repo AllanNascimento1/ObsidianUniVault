@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 anno/Programmazione 1/Programmazione 1 Generale.md",
+                "file": "1 anno/Analisi 1/Integrali.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Programmazione 1 Generale"
+              "title": "Integrali"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 anno/Programmazione 1/Linguaggio C++/Le Strutture.md",
+                "file": "1 anno/Programmazione 1/Linguaggio C++/Gestione File Testo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Le Strutture"
+              "title": "Gestione File Testo"
             }
           },
           {
@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 anno/Programmazione 1/Linguaggio C++/Linguaggio C++.md",
+                "file": "1 anno/Programmazione 1/Linguaggio C++/Lib di Sistema.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linguaggio C++"
+              "title": "Lib di Sistema"
             }
           }
         ],
@@ -201,9 +201,17 @@
   },
   "active": "84d6a57234303de4",
   "lastOpenFiles": [
+    "1 anno/Programmazione 1/Linguaggio C++/Lib di Sistema.md",
+    "1 anno/Programmazione 1/Linguaggio C++/Gestione File Testo.md",
+    "1 anno/Programmazione 1/Linguaggio C++/Stringe.md",
+    "1 anno/Analisi 1/Integrali.md",
     "1 anno/Programmazione 1/Linguaggio C++/Linguaggio C++.md",
+    "1 anno/Algebra Lineare 1/Alg Lin Generale.md",
+    "1 anno/Analisi 1/Ana Mat Generale.md",
+    "1 anno/Programmazione 1/Linux.md",
+    "1 anno/Programmazione 1/Prog 1 Generale.md",
+    "Immagini/rayTracingImg.jpg",
     "1 anno/Programmazione 1/Linguaggio C++/Le Strutture.md",
-    "1 anno/Programmazione 1/Programmazione 1 Generale.md",
     "1 anno/Programmazione 1/Concetti Generali/Scrittura di un Programma.md",
     "1 anno/Programmazione 1/Concetti Generali/Compilazione e Linking.md",
     "Immagini/Programmazione 1/{C30E77C0-2BFB-4507-BD41-755DAD74E07E}.png",
@@ -215,7 +223,6 @@
     "1 anno/Programmazione 1/Concetti Generali/Terminologia.md",
     "1 anno/Programmazione 1/Concetti Generali",
     "1 anno/Programmazione 1/Linguaggio C++.md",
-    "1 anno/Programmazione 1/Linux.md",
     "1 anno/Programmazione 1/Logica Booleana.md",
     "1 anno/Programmazione 1/Ubuntu.md",
     "1 anno/Programmazione 1/Ubuntu Shortcuts.md",
@@ -227,10 +234,7 @@
     "1 anno/Algebra Lineare 1",
     "1 anno",
     "1 anno/Algebra Lineare 1/Formulario Algebra Lineare.md",
-    "1 anno/Analisi 1/Analisi Matematica.md",
     "1 anno/Algebra Lineare 1/Equazioni Cartesiane.md",
-    "1 anno/Algebra Lineare 1/Algebra lineare.md",
-    "Immagini/rayTracingImg.jpg",
     "Tipi Derivati.md",
     "Immagini/AlgebraLineare 1/Pasted image 20251001080656.png",
     "Immagini/AlgebraLineare 1/Pasted image 20250913194011.png",
@@ -242,10 +246,6 @@
     "Immagini/AlgebraLineare/Pasted image 20250919082422.png",
     "1 anno/Algebra Lineare 1/Equazioni Parametriche.md",
     "Analisi.md",
-    "prodotto cartesiano.md",
-    "2025-09-11.md",
-    "2025-09-10.md",
-    "2025-09-12.md",
-    "09/10/2025.md"
+    "prodotto cartesiano.md"
   ]
 }

@@ -148,12 +148,3 @@ Per la gestione dinamica della memoria in C++ esiste due operatori:
 NB: quando uso `delete` a un'area di memoria, quella area può comunque essere accesa dal puntatore.
 
 Attraverso la gestione dinamica della memoria possiamo introdurre [[Le Strutture]].
-# Librerie
-#### `<iostream>
-#### `<fstream>
-#### `<string>
-#### `<ctime>
-#### `<cstdlib>
-#### `<cassert>
-##### Funzioni:
-`assert(bool) : lancia un errore se il parametro è falso

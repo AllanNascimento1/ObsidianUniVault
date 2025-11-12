@@ -1,5 +1,5 @@
 ## Vettori Geometrici
-Nel algebra lineare i punti sono rappresentati nel [insieme](Analisi%20Matematica.md#Teoria%20degli%20insiemi) $\Bbb R^2$ (Piano) o $\Bbb R^3$ (Spazio), che sono l'insiemi formati dal [prodotto cartesiano](Analisi%20Matematica.md#Prodotto%20Cartesiano) di $\Bbb R\times\Bbb R$ per il piano e $\Bbb R\times\Bbb R\times\Bbb R$ per l'spazio, questi punti possono essere identificati mediante l'introduzione di un sistema di coordinate cartesiane. 
+Nel algebra lineare i punti sono rappresentati nel [insieme](Ana%20Mat%20Generale.md#Teoria%20degli%20insiemi) $\Bbb R^2$ (Piano) o $\Bbb R^3$ (Spazio), che sono l'insiemi formati dal [prodotto cartesiano](Ana%20Mat%20Generale.md#Prodotto%20Cartesiano) di $\Bbb R\times\Bbb R$ per il piano e $\Bbb R\times\Bbb R\times\Bbb R$ per l'spazio, questi punti possono essere identificati mediante l'introduzione di un sistema di coordinate cartesiane. 
 Questi punti sono scritti $P(x,y)$ nel piano e $P(x,y,z)$ nel spazio.
 
 La prima definizione di vettore geometrico è per ogni coppia $A = (x_A,y_A)$ , $B = (x_B,y_B)$ nel piano, il vettore geometrico $\vec {AB}$ è l'elemento di $\Bbb R^2$ aventi componenti $(x_B - x_A,y_B-y_A)$ , la stessa identica cosa vale per $\Bbb R^3$. 
