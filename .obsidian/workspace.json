@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 anno/Programmazione 1/Linguaggio C++/Gestione File Testo.md",
+                "file": "1 anno/Programmazione 1/Linguaggio C++/Le Strutture.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Gestione File Testo"
+              "title": "Le Strutture"
             }
           },
           {
@@ -203,6 +203,7 @@
   "lastOpenFiles": [
     "1 anno/Programmazione 1/Linguaggio C++/Lib di Sistema.md",
     "1 anno/Programmazione 1/Linguaggio C++/Gestione File Testo.md",
+    "1 anno/Programmazione 1/Linguaggio C++/Liste Concatenate.md",
     "1 anno/Programmazione 1/Linguaggio C++/Stringe.md",
     "1 anno/Analisi 1/Integrali.md",
     "1 anno/Programmazione 1/Linguaggio C++/Linguaggio C++.md",
@@ -245,7 +246,6 @@
     "Pasted image 20250919082522.png",
     "Immagini/AlgebraLineare/Pasted image 20250919082422.png",
     "1 anno/Algebra Lineare 1/Equazioni Parametriche.md",
-    "Analisi.md",
-    "prodotto cartesiano.md"
+    "Analisi.md"
   ]
 }
