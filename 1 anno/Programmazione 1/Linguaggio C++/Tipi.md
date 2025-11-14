@@ -1,37 +1,64 @@
-[Basi per la scrittura di un programma](Scrittura%20di%20un%20Programma)
-## Operatori 
-Gli operatori in 
-## Tipi dato
-Sono distinti in:
-**Tipi fondamentali** (informazioni semplici):
-	**interi** : int, short, long, long long
-	**boolean** : bool
-	**enumerativi**: enum
-	**carattere**: char
-	**numeri reali**: float, double, long double
-	
-**Tipi derivati:**
-	costruiti a partire dei tipi fondamentali mediante array, puntatori e ecc.
+Le variabili di tipo fondamentale memorizzano informazioni semplici, in C++ 
 
-Puoi usare la funzione `sizeof(var)` per ottenere la loro dimensione in byte.
-### Tipi Fondamentali
-#### Interi
+Puoi usare la funzione `sizeof(var)` per ottenere la dimensione in byte del tipo della variabile.
+# Teoria
+Variabili sono definite in parte dal loro tipo, questo è una categorizzazione delle variabili e stabilisce lo spazio che occupano in memoria, come sono codificate infine quali e come le operazioni possono essere fatte su di esse.
+## Tipi dato numerici
+I primi tipi dato da vedere sono quelli che gestiscono numeri, ci sono diversi tipi dato per gestire i numeri:
+1. Interi positivi
+2. Interi con segno
+3. Numeri reali
+Nei pc tutto (incluso i numeri) è rappresentato in memoria attraverso una sequenza di bit, che sono i zero e uno.
+### Interi
+I **Tipi Interi positivi** usano tutti i bit nella sequenza per rappresentare il loro valore.
+
+I **Tipi Interi con segno** sono rappresentati in due maniere:
+	Segno-valore
+La prima rappresentazione usa il bit più significativo (quello più a sinistra) come il segno. Questo sistema è poco usato dato che si deve gestire le operazioni di somma e moltiplicazione in due maniere diverse in base al segno della variabile.
+	Complemento a 2
+Il complemento a 2 è di gran lunga più diffuso dato che semplifica le operazioni, come la rappresentazione segno-valore il bit più significativo rappresenta il segno (0 positivo, 1 negativo) ma questo avviene perché il numero negativo è ottenuto nel seguente modo:
+Si prende il numero positivo es:9 (00001001), si invertono i bit (11110110) e per fine si aggiunge uno es:-9 (11110111).
+### Reali
+I **Numeri Reali** sono rappresentati attraverso l'standard IEEE 754, questo standard memorizza i numeri reali in notazione scientifica e di conseguenza è composto di alcune parte: Segno (+ o -) , Esponente , Mantissa e Offset
+Esempi di notazioni scientifiche
+Decimale : $131.1 = 1.321*10^2$ 
+Binale : 
+	9.25  $1001.01=1*1.00101*2^{3}$ 
+	-0.75  $0.11=-1*1.1*2^{-1}$ 
+# Tipi in C++
+
+In C++ una variabile può essere di Tipo Fondamentale oppure di Tipo Derivato.
+
+I **Tipi Fondamentali** gestiscono le informazioni elementari di un programma cioè i numeri, caratteri e boolean. Sono divisi nei seguenti tipi:
+**interi** : int, short, long, long long
+**boolean** : bool
+**enumerativi**: enum (interi costanti)
+**carattere**: char
+**numeri reali**: float, double, long double
+
+I **Tipi Derivati** invece permettono un comportamento più complesso e flessibile di un programma dato che gestiscono un gruppo di informazioni elementari, infatti i tipi derivati sono formati dai tipi fondamentali attraverso vari meccanismi e costrutti.
+I costrutti principali per costruire i tipi derivati tipi sono:
+**Riferimenti**
+**Puntatori**
+**Array**
+**[Strutture](Le%20Strutture)**
+**[[Unioni]]**
+**[[Classi]]**
+## Tipi Fondamentali
+### Interi
 Tipicamente codificati a complemento a 2 (quindi con segno), la dimensione che occupano può cambiare da macchina a macchina. 
 puoi creare interi positivi aggiungendo `unsigned` prima del tipo.
-
-**Operazioni**
+#### Operazioni
 Le operazioni tra due numeri interi risulterà sempre in un numero intero, quindi per esempio se una divisione ritorna un numero con virgola essa sarà tagliata fuori.
-Bit-a-bit :
-\>> e <<   |   x>>n   |   shift di n bit 
+##### Operazioni Bit-a-bit :
+\>> oppure <<   |   x>>n   |   shift di n bit 
 &   |    x&y   |   AND bit a bit tra x e y
 "|"   |   x|y   |   OR 
 ^   |   x^y   |   XOR
 ~   |   ~x   |   NOT
-
 ### Boolean
-Tipo dato per gestire valori Vero=1 o Falso=0, usa la [[Logica Booleana]].
+Tipo dato per gestire valori Vero=1 o Falso=0, le operazioni sono definite dalla [[Logica Booleana]].
 L'AND e OR sono valutati attraverso la lazy evaluation, quindi se non è necessario valutare tutta l'operazione il calcolatore salterà alcune espressioni.
-
 #### Numeri Reali
 Memorizza numeri reali, ricordarti che hanno una precisione limitata che può nel corso di diverse operazioni cambiare il risultato finale sostanzialmente.
 Il confronto tra due reali può essere problematico. 
@@ -56,21 +83,8 @@ Effettuata dal programmatore attraverso i cast che possono essere:
 **Up cast** se parte da un tipo piccolo a un numero grande.
 
 Esiste anche il cast per tipi compatibili, es : char a int.
-### Stream
-In C++ esistono i seguenti stream predefiniti:
-`cin`   : Per prelevare caratteri o comandi dalla tastiera.
-`cout`   : Per scrivere dati di uscita, tipicamente associato allo schermo.
-`cerr`   : Per la gestione degli errori.
-
-La libreria che gestisce questi stream è \<iostream\>
-Per scrivere dati dentro un stream si usa l'istruzione:
-`stream << espressione1 << espressione2 << . . .;`
-
-- Questo si chiama **Scrittura Multipla** e equivale a scrivere:
-`stream << espressione1`;
-`stream << espressione2`;
-### Tipi Derivati
-#### I Riferimenti
+## Tipi Derivati
+## I Riferimenti
 I riferimenti permettono di assegnare più nomi (variabili) alla stessa area di memoria, in modo che puoi modificare il valore di quel area di memoria utilizzando uno dei due riferimenti che hai creato. 
 Sintassi:
 `int var = 0;
@@ -84,18 +98,17 @@ NB: nella dichiarazione di una variabile riferimento si deve usare la variabile 
 `int& ref_var = *id_var;
 
 Una variabile riferimento nella sua dichiarazione deve essere inizializzata e non è possibile ridefinire dove punta, in più la variabile riferimento **DEVE** avere lo stesso tipo della variabile.
-#### Operatori sugli indirizzi
+## Operatori sugli indirizzi
 #### & (Address-of)
 Ritorna l'indirizzo di memoria del espressione a cui viene applicato e serve anche per creare variabili reference.
 #### \* (Dereference)
 Ritorna il valore al interno del indirizzo di memoria del espressione a cui viene applicato, usato per i puntatori.
-#### I Puntatori
+## I Puntatori
 I puntatori sono delle variabili che hanno la funzione di gestire le aree di memoria di altre variabili, quindi come valore hanno indirizzi di memoria.
 Sintassi:
 `int *id_var;
 I puntatori ritornano l'indirizzo di memoria del oggetto a cui punta.
-
-**Assegnazioni a Puntatori**
+### Assegnazioni a Puntatori
 Per assegnare loro un indirizzo di memoria si deve fare uso del istruzione di **Address-of (&)**, che restituirà l'indirizzo di memoria del oggetto a cui è applicato.
 `int *id_var;
 `int var = 10;
@@ -132,19 +145,3 @@ Dato che questi puntatori non hanno tipo si dovrà fare uso del cast esplicito p
 Ci sono 3 tipi di puntatori costanti:
 Puntatori a costante:
 `const int* var;
-
-## Allocazione e Deallocazione
-### Statica
-La allocazione di memoria statica obbliga a definire la struttura e la dimensione a compile time, dato che memorizza i dati nel stack. Un esempio di allocazione statica è la dichiarazione di un array statico, o semplicemente la dichiarazione di una variabile di tipo base (fondamentale).
-
-### Dinamica
-La allocazione dinamica usa un'area di memoria chiamata store (heap) che gestisce l'acceso a questi dati attraverso i puntatori.
-Per la gestione dinamica della memoria in C++ esiste due operatori:
-`new tipo` - Alloca un area nel heap adatta a contenere un oggetto della dimensione del suo tipo.
-`new tipo[n]` - Alloca nel heap n celle della dimensione del tipo, ossia per memorizzare un array.
-`delete indirizzo` - Dice al sistema operativo che quel area di memoria non è più utilizzata dal programma, i dati al interno del heap non vengono azzerati.
-`delete[n] indirizzo` - Dice al SO di liberare le n celle di dimensione del tipo.
-
-NB: quando uso `delete` a un'area di memoria, quella area può comunque essere accesa dal puntatore.
-
-Attraverso la gestione dinamica della memoria possiamo introdurre [[Le Strutture]].
