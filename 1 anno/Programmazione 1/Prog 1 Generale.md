@@ -12,6 +12,7 @@ Cioè i concetti separati da un linguaggio di programmazione specifico :
 [[Scrittura di un Programma]]
 [[Variabili e Costanti]]
 [[Istruzioni]]
+[[Struttura di un Programma]]
 ## Linguaggio C++
 [[Tipi]]
 [Le String](Stringe.md)
@@ -19,5 +20,6 @@ Cioè i concetti separati da un linguaggio di programmazione specifico :
 [[Le Strutture]]
 [[Allocazione e Deallocazione]]
 [[Liste Concatenate]]
+[Specificatori](Struttura%20di%20un%20Programma#Specificatori#In%20C++)
 ## Boh
 [[Linux]]
