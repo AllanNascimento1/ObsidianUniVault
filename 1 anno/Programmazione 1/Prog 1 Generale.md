@@ -15,6 +15,8 @@ Cioè i concetti separati da un linguaggio di programmazione specifico :
 [[Struttura di un Programma]]
 ## Linguaggio C++
 [[Tipi]]
+[[Stream]]
+[[Array]]
 [Le String](Stringe.md)
 [[Gestione File Testo]]
 [[Le Strutture]]
