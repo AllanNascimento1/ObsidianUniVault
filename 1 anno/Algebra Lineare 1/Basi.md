@@ -34,3 +34,11 @@ $$U+W=\{v=u+w\in V|u\in U,w\in W \}$$
 #### Formula di Grassmann
 $$dim(U+W)+dim(U\cap W)=dim(U)+dim(W)$$
 Questa formula funziona perché la dimensione della somma $U$ e $W$ è il numero di vettori **LI** nel unione tra gli insiemi generatori, mentre la dimensione del l'intercessione è il numero di vettori **LD** nella unione tra l'insiemi generatori. La somma dei numeri di vettori **LI** e **LD** è uguale al numero totale di vettori, cioè $dim(U)+dim(W)$.
+# Interpolazione polinomiale
+Fissati $n$ punti $(x_1,y_1),...,(x_n,y_n)$ con tutte le $x_1$ distinte, trovare un polinomio che passi per tutti gli $n$ punti. Questo problema ha un unica soluzione se il grado del polinomio ha grado massimo $n$-1. 
+Questo problema è molto più semplice se consideriamo la base formata dai **Polinomi di Lagrange** che è costruita dai polinomi :
+$$
+f_i(x)=\prod_{j=1,j\neq i}^{n}\frac{x-x_j}{x_i-x_j}\ \ \ \ \ \ (i=1,...,n)
+$$
+Cioè il polinomio $f_i(x)$ di grado $n$-1 si annulla dove $x=x_j\ \ j\neq i$ ed è uguale ad 1 se $x=x_i$.
+Se prendiamo tutti i $f_i(x)$  $(i=1,...,n)$ come base allora la combinazione lineare $f(x)=\sum_{i=1}^{n}y_if_i(x)$ il polinomio $f(x)$ passerà per tutti i punti fissati.
