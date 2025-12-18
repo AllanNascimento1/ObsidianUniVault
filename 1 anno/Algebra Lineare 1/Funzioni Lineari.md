@@ -59,10 +59,15 @@ La matrice $A\in M_{mn}(\Bbb K)$ è costruita prendendo come le $n$ colonne i ve
 ### Definizione 3
 La matrice $A$ costruita in questo modo è detta matrice associata a $T$ rispetto alle basi $B$ e $C$, e indicata col simbolo $M_B^C(T)$. Se $V=V'$ e $B=C$ allora si scrive $M_B(T)$.
 Se $V=K^n$,$V=K^m$ e si scelgono le basi canoniche nei due spazi allora si scrive $M(T)$. Si noti che vale sempre: $M(T_A)=A$.
+La funzione $T_A:K^n\rightarrow K^m$, cioè prende coordinate di vettori $v$ rispetto alla base $B$ e li trasforma in coordinate di vettori $v'$ rispetto a $C$.
 ### Proposizione 3
 Sia $T:V\rightarrow V'$ con base $B$ di $V$ e $C$ di $V'$ e sia $A=M_B^C(T)$. Si consideri $v\in V$ e sia $x$ il vettore colonna delle coordinate $x_1,...,x_n$ di $v$ rispetto alla base $B$ allora l'immagine $T(v)$ ha vettore delle coordinate rispetto alla base $C$ date dal prodotto matriciale $Ax$. 
-Cioè $Ax=T_C(T(v))$ dove il vettore coordinate $x$ può essere calcolato attraverso $v$ : $x=T_B(v)$ e il vettore stesso $v$ può essere calcolato attraverso le coordinate : $v=T_B^{-1}(x)=x_1b_1+...+x_nb_n$.
+Cioè $Ax=T_C(T(v))$ dove il vettore coordinate $x$ può essere calcolato attraverso $v$ in questo modo : $x=T_B(v)$ e il vettore stesso $v$ può essere calcolato attraverso le coordinate in questo modo : $v=T_B^{-1}(x)=x_1b_1+...+x_nb_n$.
 ### Proposizione 4
 Sia $A=M_B^C(T)$. Valgono le seguenti proprietà:
 $$T_C(Im(T))=Im(T_A),\ \ T_B(N(T))=N(T_A)$$
-Dove $T:K^n\rightarrow K^m$ cioè la funzione che trasforma le coordinate dei vettori in $V$ a coordinate di vettori in $V'$.
+Dove $T_A:K^n\rightarrow K^m$ cioè la funzione che trasforma le coordinate dei vettori in $V$ a coordinate di vettori in $V'$ e $T:V\rightarrow V'$.
+
+$Im(T)$ è un insieme di vettori che appartengono a $V'$, quindi $T_C(v'),\ \ v\in Im(T)\in V'$ è sempre valido e ritorna i vettori coordinate di $v'$, dato che $T_A$ lavora con le coordinate allora la sua immagine è l'insieme dei vettori coordinate di $v'$, stessa cosa di $T_C(Im(T))$.
+
+$N(T)$ invece è un insieme di vettori che appartengono a $V$ (dato che sono i vettori tali che $T(v)=0,\ \ v\in V$ ), allora le coordinate dei vettori $v\in N(T)\in V$ cioè $T_B(N(T))$ 
