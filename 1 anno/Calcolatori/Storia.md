@@ -1,0 +1,2 @@
+I calcolatori elettronici, cioè tutti i PC, sono nati per effettuare calcoli matematici. Sono nati nel 1943 quando il Dipartimento della Difesa degli Stati Uniti commissionò una macchina per il calcolo delle traiettorie dei proiettili di artiglieria, che verrà messa in funzione nel febbraio 1946 e viene chiamata ENIAC.
+Dopo nel 1959 viene inventato il transistore che verrà usato nel 1969 per l'Apollo Guidance Computer che è molto più compatto del ENIAC che occupava un intera stanza.
